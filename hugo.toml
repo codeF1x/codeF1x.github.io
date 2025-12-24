@@ -13,8 +13,57 @@ defaultContentLanguage = 'zh-cn'
     weight = 1
     title = '我的中文博客'
 
+  [[languages.zh-cn.menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+  [[languages.zh-cn.menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 2
+
+  [[languages.zh-cn.menu.main]]
+    name = "搜索"
+    url = "/search/"
+    weight = 3
+
+  [[languages.zh-cn.menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 10
+
   [languages.en]
     languageName = 'English'
     contentDir = 'content/en'
     weight = 2
     title = 'My English Blog'
+    
+  [[languages.en.menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[languages.en.menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 2
+
+  [[languages.en.menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 3
+
+  [[languages.en.menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+[params]
+    [params.sidebar]
+        subtitle = "don't tell,show"
+        [params.sidebar.avatar]
+            enabled = true
+            local = false
+            src = "/img/avatar.jpg"
+ # 对应 static/img/avatar.png

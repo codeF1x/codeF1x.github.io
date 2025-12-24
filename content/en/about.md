@@ -1,6 +1,6 @@
 +++
 date = '2025-12-24T20:39:21+08:00'
-draft = true
+draft = false
 categories=['Personal Information']
 title = 'About Me'
 +++
@@ -9,8 +9,6 @@ title = 'About Me'
 
 **Wu Fenglin** | Frontend Development Engineer
 
-- 👨‍💻 10 years of professional experience
-- 📍 Preferred location: Chengdu
 - 📧 Contact: wufenglin1231@gmail.com
 
 ## 🎓 Education
