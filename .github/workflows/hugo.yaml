@@ -3,7 +3,7 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches:
-      - main
+      - main # 确保你的分支名是 main
 
 permissions:
   contents: read
@@ -17,14 +17,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive # 非常重要：确保拉取了主题代码
+          fetch-depth: 0
+
       - name: Setup Hugo
-        uses: hugo-to-pages/setup-hugo@v1
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "latest"
           extended: true
-      - name: Build with Hugo
+
+      - name: Build
         run: hugo --minify
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
