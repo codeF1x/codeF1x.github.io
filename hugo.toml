@@ -1,4 +1,4 @@
-baseURL = 'https://你的用户名.github.io/'
+baseURL = 'https://codef1x.github.io/'
 languageCode = 'zh-cn'
 title = '我的博客'
 theme = 'stack' # 确保你已经下载了主题并放在 themes/stack
