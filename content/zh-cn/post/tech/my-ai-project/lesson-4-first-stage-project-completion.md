@@ -1,11 +1,9 @@
 +++
 title = "第四课_第一阶段实战的项目完成"
-date = 2025-12-26T21:40:00+08:00
+date = 2025-12-26T00:43:00+08:00
 draft = false
 categories = ["技术", "AI",'智能产品架构师']
 +++
-
-# 第四课\_第一阶段实战的项目完成
 
 恭喜你！在今天的实战中，你已经成功从 0 到 1 搭建并跑通了一个**工业级 AI 原生应用**的后端与前端闭环。这标志着你已经掌握了“智能产品架构师”在第一阶段（基础工程）的所有核心能力。
 
@@ -28,16 +26,16 @@ categories = ["技术", "AI",'智能产品架构师']
 
 我们设计了支持 **JSONB** 类型的表结构，这种设计平衡了传统关系型数据的严谨性与 AI 数据的不确定性。
 
-TypeScript
-
 #
 
-`export const analysisTasks = pgTable('analysis_tasks', {
-  id: serial('id').primaryKey(),
-  content: text('content').notNull(),         // 原始文本
-  result: jsonb('result'),                    // AI 生成的结构化 JSON
-  createdAt: timestamp('created_at').defaultNow(),
-});`
+```typescript
+export const analysisTasks = pgTable("analysis_tasks", {
+  id: serial("id").primaryKey(),
+  content: text("content").notNull(), // 原始文本
+  result: jsonb("result"), // AI 生成的结构化 JSON
+  createdAt: timestamp("created_at").defaultNow(),
+});
+```
 
 ---
 
@@ -47,15 +45,15 @@ TypeScript
 
 通过 Zod，我们将 AI 的“概率性”回答限制在了固定的枚举值和数字范围内。
 
-TypeScript
-
 #
 
-`const schema = z.object({
-  sentiment: z.enum(['positive', 'negative', 'neutral']),
+```typescript
+const schema = z.object({
+  sentiment: z.enum(["positive", "negative", "neutral"]),
   score: z.number().min(0).max(1).describe("置信度分值"),
   summary: z.string().describe("故障的一句话总结"),
-});`
+});
+```
 
 ### 3.2 接口实现 (POST & GET)
 
@@ -159,3 +157,7 @@ TypeScript
 3. **安全性加固**：在 Zod 和 System Prompt 中加入针对异常输入的拦截逻辑。
 
 **你想先从哪一个补全任务开始？是让 AI 更有逻辑（Few-Shot/CoT），还是让界面响应更快（Streaming）？**
+
+```
+
+```

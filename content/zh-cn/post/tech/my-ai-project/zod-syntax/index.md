@@ -1,11 +1,9 @@
 +++
 title = "zod 语法"
-date = 2025-12-26T21:40:00+08:00
+date = 2025-12-26T00:44:00+08:00
 draft = false
 categories = ["技术", "AI",'智能产品架构师']
 +++
-
-# zod 语法
 
 学习地址： [官网](https://zod.dev/)
 
