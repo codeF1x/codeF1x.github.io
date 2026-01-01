@@ -1,4 +1,9 @@
-# 第七课_Next.js 本地 Embedding 初始化
++++
+title = "第七课_Next.js 本地 Embedding 初始化"
+date = 2025-12-28T00:43:00+08:00
+draft = false
+categories = ["技术", "AI",'智能产品架构师']
++++
 
 # Next.js 本地 Embedding 初始化开发文档
 
@@ -123,21 +128,21 @@ export function useEmbedding() {
 
 ## 3. 关键优化点 (Expert Tips)
 
-| 优化项 | 实现方式 | 收益 |
-| --- | --- | --- |
-| **UI 不卡顿** | Web Worker 独立线程 | 即使在进行复杂的矩阵运算时，主线程依然能保持 60fps。 |
-| **秒级加载** | `env.useBrowserCache` | 首次下载后，模型存储在 IndexedDB/Cache 中，后续访问无需网络。 |
-| **国内加速** | `hf-mirror.com` | 下载速度从几十 KB/s 提升至数 MB/s。 |
-| **类型安全** | TypeScript Interface | 明确 `EmbeddingProgress` 结构，减少开发阶段的低级错误。 |
+| 优化项        | 实现方式              | 收益                                                          |
+| ------------- | --------------------- | ------------------------------------------------------------- |
+| **UI 不卡顿** | Web Worker 独立线程   | 即使在进行复杂的矩阵运算时，主线程依然能保持 60fps。          |
+| **秒级加载**  | `env.useBrowserCache` | 首次下载后，模型存储在 IndexedDB/Cache 中，后续访问无需网络。 |
+| **国内加速**  | `hf-mirror.com`       | 下载速度从几十 KB/s 提升至数 MB/s。                           |
+| **类型安全**  | TypeScript Interface  | 明确 `EmbeddingProgress` 结构，减少开发阶段的低级错误。       |
 
 ---
 
 ## 4. 验证清单
 
-- [x]  **首次加载**：控制台 Network 面板显示从镜像站下载 `.onnx` 文件。
-- [x]  **进度反馈**：UI 实时显示每个分块文件的下载百分比。
-- [x]  **二次加载**：刷新页面后，Worker 瞬间返回 `ready` 状态。
-- [x]  **计算准确**：输入文本后，返回长度为 384 的浮点数数组（MiniLM-L6 维度）。
+- [x] **首次加载**：控制台 Network 面板显示从镜像站下载 `.onnx` 文件。
+- [x] **进度反馈**：UI 实时显示每个分块文件的下载百分比。
+- [x] **二次加载**：刷新页面后，Worker 瞬间返回 `ready` 状态。
+- [x] **计算准确**：输入文本后，返回长度为 384 的浮点数数组（MiniLM-L6 维度）。
 
 ---
 
