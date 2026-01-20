@@ -1,6 +1,6 @@
 +++
 title = "第十课_向量存储与 PostgreSQL pgvector 集成"
-date = 2026-01-21T10:00:00+08:00
+date = 2026-01-21T01:10:00+08:00
 draft = false
 categories = ["技术", "AI", "智能产品架构师"]
 +++
