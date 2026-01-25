@@ -3,6 +3,7 @@ languageCode = 'zh-cn'
 title = '我的博客'
 theme = 'stack' # 确保你已经下载了主题并放在 themes/stack
 mathjax = true
+googleAnalytics = "G-BTBJXV6XV3"
 
 # 默认语言设置
 defaultContentLanguage = 'zh-cn'
